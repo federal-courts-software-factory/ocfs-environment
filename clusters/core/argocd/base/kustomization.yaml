@@ -21,6 +21,6 @@ patches:
 - path: configmap/argocd-cm.yaml
 #- path: configmap/argocd-rbac-cm.patch.yaml
 
-components:
-# extensions controller component
-- https://github.com/argoproj-labs/argocd-extensions/manifests
+# components:
+# # extensions controller component
+# - https://github.com/argoproj-labs/argocd-extensions/manifests
