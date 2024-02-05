@@ -3,9 +3,9 @@ kind: ConfigMap
 metadata:
   name: argocd-cm
 data:
-#  admin.enabled: "false"
+  admin.enabled: "true"
 # server.insecure: "true"
-  users.anonymous.enabled: "true"
+#  users.anonymous.enabled: "true"
 #  url: https://argocd.example.com
   dex.config: |
     connectors:

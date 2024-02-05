@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
 data:
-  policy.default: role:admin
+  #policy.default: role:admin
   policy.csv: |
     p, federal-courts-software-factory/software-engineers, role:admin
     g, federal-courts-software-factory/infrastructure, role:admin

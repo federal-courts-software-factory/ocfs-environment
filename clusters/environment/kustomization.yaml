@@ -14,3 +14,6 @@ resources:
 - applications/argocd-app-surrealdb.yaml
 - applications/argocd-app-tikv.yaml
 - applications/argocd-proj-demo.yaml
+
+- appsets/pr-previews-docket-api.yaml
+- appsets/pr-previews-web.yaml

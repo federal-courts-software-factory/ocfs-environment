@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: pr-previews
+  name: pr-previews-web
 spec:
   generators:
   - pullRequest:
@@ -12,7 +12,7 @@ spec:
         repo: open-case-filing-system
       requeueAfterSeconds: 1800
   template:
-     metadata:
+    metadata:
       name: 'ocfs-{{branch}}-{{number}}'
     spec:
       destination:
@@ -42,3 +42,4 @@ spec:
       syncPolicy:
         automated:
           selfHeal: true
+
