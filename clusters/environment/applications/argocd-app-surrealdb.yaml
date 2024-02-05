@@ -10,7 +10,7 @@ spec:
   project: demo
   source:
     path: clusters/core/surrealdb/installation
-    repoURL: https://github.com/federal-courts-software-factory/open-case-filing-system.git
+    repoURL: https://github.comfederal-courts-software-factory/ocfs-environment.git
     targetRevision: main
   destination:
     server: https://kubernetes.default.svc
