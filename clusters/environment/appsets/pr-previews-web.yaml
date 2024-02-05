@@ -9,7 +9,7 @@ spec:
         # The GitHub organization or user.
         owner: federal-courts-software-factory
         # The Github repository
-        repo: open-case-filing-system
+        repo: ocfs-environment
       requeueAfterSeconds: 1800
   template:
     metadata:
@@ -20,16 +20,13 @@ spec:
         server: 'https://kubernetes.default.svc'
       project: demo
       source:
-        # (3)
         path: clusters/environment/appsets/preview/web
         repoURL: 'https://github.comfederal-courts-software-factory/ocfs-environment.git'
         targetRevision: HEAD
         helm:
           parameters:
-            # (4)
             - name: namespace
               value: 'preview-{{branch}}'
-            # (5)
             - name: version
               value: '{{head_sha}}'
             - name: test
@@ -43,3 +40,29 @@ spec:
         automated:
           selfHeal: true
 
+# apiVersion: argoproj.io/v1alpha1
+# kind: ApplicationSet
+# metadata:
+#   name: myapps
+# spec:
+#   generators:
+#   - pullRequest:
+#     # ...
+#   template:
+#     metadata:
+#       name: 'myapp-{{branch}}-{{number}}'
+#     spec:
+#       source:
+#         repoURL: 'https://github.com/myorg/myrepo.git'
+#         targetRevision: '{{head_sha}}'
+#         path: kubernetes/
+#         kustomize:
+#           nameSuffix: {{branch}}
+#           commonLabels:
+#             app.kubernetes.io/instance: {{branch}}-{{number}}
+#           images:
+#           - ghcr.io/myorg/myrepo:{{head_sha}}
+#       project: "my-project"
+#       destination:
+#         server: https://kubernetes.default.svc
+#         namespace: default
