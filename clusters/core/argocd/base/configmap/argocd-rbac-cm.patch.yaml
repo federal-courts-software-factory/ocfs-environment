@@ -6,19 +6,8 @@ metadata:
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
 data:
-  policy.default: role:readonly
+  policy.default: role:admin
   policy.csv: |
-    p, federal-courts-software-factory/software-engineers, applications, *, */*, allow
-    p, federal-courts-software-factory/software-engineers, clusters, get, *, allow
-    p, federal-courts-software-factory/software-engineers, repositories, get, *, allow
-    p, federal-courts-software-factory/software-engineers, repositories, create, *, allow
-    p, federal-courts-software-factory/software-engineers repositories, update, *, allow
-    p, federal-courts-software-factory/software-engineers, repositories, delete, *, allow
-    p, federal-courts-software-factory/software-engineers, projects, get, *, allow
-    p, federal-courts-software-factory/software-engineers, projects, create, *, allow
-    p, federal-courts-software-factory/software-engineers, projects, update, *, allow
-    p, federal-courts-software-factory/software-engineers, projects, delete, *, allow
-    p, federal-courts-software-factory/software-engineers, logs, get, *, allow
-    p, federal-courts-software-factory/software-engineers, exec, create, */*, allow
-    g, federal-courts-software-factory/infrastructure, role:org-admin
+    p, federal-courts-software-factory/software-engineers, role:admin
+    g, federal-courts-software-factory/infrastructure, role:admin
   scopes: '[email,groups]'
