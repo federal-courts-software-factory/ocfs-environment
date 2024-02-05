@@ -14,12 +14,12 @@ resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 # For High Availability
 #- argocd-ha-installation.yaml
-- argocd-destinationrule.yaml
-- extensions.yaml
+#- argocd-destinationrule.yaml
+#- extensions.yaml
 
 patches:
 - path: configmap/argocd-cm.yaml
-- path: argocd-rbac-cm.patch.yaml
+- path: configmap/argocd-rbac-cm.patch.yaml
 
 components:
 # extensions controller component
