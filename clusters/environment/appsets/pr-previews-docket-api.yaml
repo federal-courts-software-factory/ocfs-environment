@@ -22,7 +22,7 @@ spec:
       source:
         # (3)
         path: clusters/environment/appsets/preview/docket-api
-        repoURL: 'https://github.comfederal-courts-software-factory/ocfs-environment.git'
+        repoURL: 'https://github.com/federal-courts-software-factory/ocfs-environment.git'
         targetRevision: HEAD
         helm:
           parameters:

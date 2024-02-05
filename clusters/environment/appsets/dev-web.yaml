@@ -8,7 +8,7 @@ spec:
   - git:
       directories:
       - path: clusters/apps/web/overlays/dev-cluster
-      repoURL: https://github.comfederal-courts-software-factory/ocfs-environment.git
+      repoURL: https://github.com/federal-courts-software-factory/ocfs-environment.git
       revision: main
   template:
     metadata:
@@ -16,7 +16,7 @@ spec:
     spec:
       source:
         path: '{{path}}' # full path
-        repoURL: https://github.comfederal-courts-software-factory/ocfs-environment.git
+        repoURL: https://github.com/federal-courts-software-factory/ocfs-environment.git
         targetRevision: main
       project: default
       destination:

@@ -7,17 +7,17 @@ data:
 # server.insecure: "true"
 #  users.anonymous.enabled: "true"
 #  url: https://argocd.example.com
-  dex.config: |
-    connectors:
-      # GitHub SSO
-      - type: github
-        id: github
-        name: GitHub
-        config:
-          clientID: e4599148f24322ae7714e45
-          clientSecret: github-sso.clientSecret:dex.github.clientSecret
-          orgs:
-          - name: federal-courts-software-factory/open-case-filing-system
+  # dex.config: |
+  #   connectors:
+  #     # GitHub SSO
+  #     - type: github
+  #       id: github
+  #       name: GitHub
+  #       config:
+  #         clientID: e4599148f24322ae7714e45
+  #         clientSecret: github-sso.clientSecret:dex.github.clientSecret
+  #         orgs:
+  #         - name: federal-courts-software-factory/open-case-filing-system
 
 
      

@@ -19,7 +19,7 @@ resources:
 
 patches:
 - path: configmap/argocd-cm.yaml
-- path: configmap/argocd-rbac-cm.patch.yaml
+#- path: configmap/argocd-rbac-cm.patch.yaml
 
 components:
 # extensions controller component
