@@ -1,0 +1,44 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: pr-previews
+spec:
+  generators:
+  - pullRequest:
+      github:
+        # The GitHub organization or user.
+        owner: federal-courts-software-factory
+        # The Github repository
+        repo: open-case-filing-system
+      requeueAfterSeconds: 1800
+  template:
+     metadata:
+      name: 'ocfs-{{branch}}-{{number}}'
+    spec:
+      destination:
+        namespace: 'preview-{{branch}}'
+        server: 'https://kubernetes.default.svc'
+      project: demo
+      source:
+        # (3)
+        path: clusters/environment/appsets/preview/web
+        repoURL: 'https://github.comfederal-courts-software-factory/ocfs-environment.git'
+        targetRevision: HEAD
+        helm:
+          parameters:
+            # (4)
+            - name: namespace
+              value: 'preview-{{branch}}'
+            # (5)
+            - name: version
+              value: '{{head_sha}}'
+            - name: test
+              value: '{{ARGOCD_APP_SOURCE_PATH}}'
+            - name: image
+              value: web
+            - name: name
+              value: pr-web
+      # (7)
+      syncPolicy:
+        automated:
+          selfHeal: true

@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: docket-api-service
+  name: {{ .Values.name }}-service
 spec:
   type: ClusterIP
   selector:
-    app: docket-api
+    app: {{ .Values.name }}
   ports:
   - port: 9090
     name: http-port
