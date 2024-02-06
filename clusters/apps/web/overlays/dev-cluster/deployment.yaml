@@ -18,7 +18,7 @@ spec:
     spec:
       serviceAccountName: web-sa
       containers:
-      - image: ghcr.io/federal-courts-software-factory/open-case-filing-system/web:sha-6d376c2
+      - image: ghcr.io/federal-courts-software-factory/open-case-filing-system/web:sha-6564960
         name: web
         imagePullPolicy: Always
         ports:
