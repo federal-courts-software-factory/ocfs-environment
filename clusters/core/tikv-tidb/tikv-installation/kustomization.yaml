@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - ./tikv-for-surrealdb.yaml
+  - https://raw.githubusercontent.com/pingcap/tidb-operator/v1.4.5/examples/basic/tidb-cluster.yaml

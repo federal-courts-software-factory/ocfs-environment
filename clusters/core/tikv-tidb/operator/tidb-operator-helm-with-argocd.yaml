@@ -12,9 +12,9 @@ spec:
     targetRevision: v1.5.1
     chart: tidb-operator
 
-    # helm:
-    #   values: |
-    #     installCRDs: true
+    helm:
+      values: |
+        installCRDs: true
 
   destination:
     server: https://kubernetes.default.svc
