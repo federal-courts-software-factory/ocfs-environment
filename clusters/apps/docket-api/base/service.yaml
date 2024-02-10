@@ -7,5 +7,5 @@ spec:
   selector:
     app: docket-api
   ports:
-  - port: 9090
+  - port: 9000
     name: http-port
