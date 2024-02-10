@@ -10,7 +10,7 @@ images:
     newTag: v2.7.2
 
 resources:
-- namespace.yaml
+#- namespace.yaml
 - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 # For High Availability
 #- argocd-ha-installation.yaml
