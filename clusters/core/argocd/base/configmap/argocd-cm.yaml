@@ -6,7 +6,7 @@ data:
   admin.enabled: "true"
   server.insecure: "true"
 #  users.anonymous.enabled: "true"
-#  url: https://argocd.example.com
+  url: http://argocd.ocfs.dev
   # dex.config: |
   #   connectors:
   #     # GitHub SSO

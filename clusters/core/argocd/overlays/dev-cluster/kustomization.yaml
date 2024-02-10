@@ -4,5 +4,4 @@ kind: Kustomization
 resources:
   - ../../base
   - ../../../../environment
-
-
+  - argocd-ingress.yaml
